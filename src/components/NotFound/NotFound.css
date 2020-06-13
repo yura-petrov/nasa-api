@@ -1,0 +1,21 @@
+.page {
+  margin-top: 5vh;
+}
+
+.not-found {
+  height: 60vh;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.text {
+  text-align: end;
+  font-size: 3vh;
+}
+
+.heading {
+  font-size: 5vh;
+}

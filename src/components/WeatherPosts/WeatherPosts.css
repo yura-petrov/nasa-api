@@ -1,0 +1,23 @@
+.main {
+  position: relative;
+  width: 98%;
+  height: 95vh;
+  margin: 2vh 1% 2vh 1%;
+  background-image: url('https://i.ibb.co/GkBr8TD/mars.jpg');
+  background-position: center;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgb(0, 0, 0);
+}
+
+.days {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.progress-bar {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0);
+}

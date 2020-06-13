@@ -1,0 +1,46 @@
+.app {
+  color: aliceblue;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.img {
+  height: 60vh;
+  margin-top: 10vh;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.btn {
+  padding: 12px 35px;
+  position: relative;
+  color: #fff;
+  margin-top: 10vh;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 5px;
+  right: 5px;
+  background-color: #305e99;
+  z-index: -1;
+  transition: transform .2s ease-in-out;
+}
+
+.btn::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border: 1px solid #474E51;
+}
+
+.btn:hover::before {
+  transform: translate(6px, -4px);
+}
