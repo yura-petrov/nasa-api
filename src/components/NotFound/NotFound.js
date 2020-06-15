@@ -22,8 +22,11 @@ const NotFound = () => {
           <p className="text">It looks like this page has been stolen</p>
         </div>
       </div>
-
-      <img src="https://i.ibb.co/JtT1XYw/404.png" className="not-found" />
+      <img
+        src="https://i.ibb.co/JtT1XYw/404.png"
+        className="not-found"
+        alt="error-pic"
+      />
     </div>
   );
 };

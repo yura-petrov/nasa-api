@@ -7,16 +7,13 @@ import { fetchWeather } from '../../redux/actions/action';
 
 import Day from '../Day/Day';
 import FullInfo from '../FullInfo/FullInfo';
-import { data } from './data';
 
 const WeatherPosts = () => {
-  // const dispatch = useDispatch();
-  // const days = useSelector((state) => state.posts.fetchWeather);
-  // dispatch(fetchWeather());
-
-  const days = data;
+  const dispatch = useDispatch();
+  const days = useSelector((state) => state.posts.fetchWeather);
 
   if (Object.keys(days).length === 0) {
+    dispatch(fetchWeather());
     return <CircularProgress color="inherit" className="progress-bar" />;
   }
 

@@ -18,7 +18,7 @@ const FullInfo = () => {
   const days = useSelector((state) => state.posts.currentWeather);
 
   if (Object.keys(days).length === 0) {
-    return <p>qw</p>;
+    return <p>error</p>;
   }
 
   return (
