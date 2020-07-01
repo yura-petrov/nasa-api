@@ -1,12 +1,12 @@
-import React from 'react';
-import './WeatherPosts.css';
-import { useDispatch, useSelector } from 'react-redux';
+import React from "react";
+import "./WeatherPosts.css";
+import { useDispatch, useSelector } from "react-redux";
 
-import CircularProgress from '@material-ui/core/CircularProgress';
-import { fetchWeather } from '../../redux/actions/action';
+import { fetchWeather } from "../../redux/actions/action";
 
-import Day from '../Day/Day';
-import FullInfo from '../FullInfo/FullInfo';
+import Day from "../Day/Day";
+import FullInfo from "../FullInfo/FullInfo";
+import Loader from '../Loader/Loader';
 
 const WeatherPosts = () => {
   const dispatch = useDispatch();
@@ -14,7 +14,7 @@ const WeatherPosts = () => {
 
   if (Object.keys(days).length === 0) {
     dispatch(fetchWeather());
-    return <CircularProgress color="inherit" className="progress-bar" />;
+    return <Loader />;
   }
 
   return (
@@ -22,7 +22,7 @@ const WeatherPosts = () => {
       <FullInfo />
       <div className="days">
         {days.sol_keys.map((day) => (
-          <Day day={days[day]} key={days[day]['First_UTC']} />
+          <Day day={days[day]} key={days[day]["First_UTC"]} />
         ))}
       </div>
     </div>

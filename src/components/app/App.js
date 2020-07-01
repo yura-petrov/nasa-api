@@ -1,11 +1,10 @@
-import React from 'react';
-import './App.css';
+import React from "react";
+import "./App.css";
 
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
-import WeatherPosts from '../WeatherPosts/WeatherPosts';
-import NotFound from '../NotFound/NotFound';
-import Test from '../Test/Test';
+import WeatherPosts from "../WeatherPosts/WeatherPosts";
+import NotFound from "../NotFound/NotFound";
 
 const App = () => (
   <div className="app">
@@ -23,9 +22,6 @@ const App = () => (
             className="img"
             alt="astronaut"
           />
-        </Route>
-        <Route exact path="/test">
-          <Test />
         </Route>
         <Route exact>
           <NotFound />
